@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customer Dashboard &amp; Tracking — Nedlloyd Logistics</title>
+<meta name="description" content="Role-based Customer Dashboard for Nedlloyd Logistics — Admin, Employee, Client and Client's Customer roles, ten-milestone shipment tracking, and a full user guide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav class="container">
+    <a href="index.html" class="logo" aria-label="Nedlloyd Logistics home">
+      <img src="assets/logo.png" alt="Nedlloyd Logistics" class="logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="tracking.html" class="active">Tracking</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn btn-ghost btn-sm" onclick="openModal('loginModal')">Client Login</button>
+      <a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a>
+      <button class="hamburger" aria-label="Menu" onclick="toggleMobile()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div id="mobileMenu" style="display:none;background:var(--dark-2);border-top:1px solid var(--line);">
+    <div class="container" style="padding:20px 28px;display:flex;flex-direction:column;gap:16px;">
+      <a href="about.html" style="color:#fff;">About</a>
+      <a href="services.html" style="color:#fff;">Services</a>
+      <a href="industries.html" style="color:#fff;">Industries</a>
+      <a href="tracking.html" style="color:#fff;">Tracking</a>
+      <a href="corporate.html" style="color:#fff;">Corporate</a>
+      <a href="compliances.html" style="color:#fff;">Compliances</a>
+      <a href="careers.html" style="color:#fff;">Careers</a>
+      <a href="contact.html" style="color:#fff;">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero stack-section">
+  <div class="container page-hero-grid">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Customer Dashboard</span></div>
+      <span class="eyebrow light">Live Visibility</span>
+      <h1>Track every shipment, from booking to POD.</h1>
+      <p class="lead">Every job runs through ten tracked milestones on one Job Number. Role-based dashboards mean your team, your company, and your own customers all see exactly what they need — nothing more.</p>
+      <div class="hero-actions" style="margin-top:28px;">
+        <button class="btn btn-primary" onclick="openModal('loginModal')">Access Dashboard →</button>
+        <a href="#guide" class="btn btn-ghost">Read the User Guide</a>
+      </div>
+    </div>
+    <div class="page-hero-visual">
+      <canvas id="page-hero-canvas" data-scene="radar" aria-hidden="true"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROLES ============ -->
+<section id="roles" class="stack-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Four Roles, One System</span>
+      <h2>See only what's relevant to you.</h2>
+      <p>Access cascades from Nedlloyd downward — each role can only see, and provision, what it's meant to.</p>
+    </div>
+    <div class="role-tabs">
+      <button class="role-tab active" onclick="showRoleTab('admin', this)">Nedlloyd Admin</button>
+      <button class="role-tab" onclick="showRoleTab('employee', this)">Employee</button>
+      <button class="role-tab" onclick="showRoleTab('client', this)">Client</button>
+      <button class="role-tab" onclick="showRoleTab('customer', this)">Client's Customer</button>
+    </div>
+
+    <div class="role-panel active" id="panel-admin">
+      <div class="card-grid">
+        <div class="tilt-card" data-tilt><span class="num">SEES</span><h3>Every client, every job</h3><p>Full visibility across all clients and jobs — open and closed — with no filtering.</p></div>
+        <div class="tilt-card" data-tilt><span class="num">CREATES</span><h3>Client logins</h3><p>Provisions Client ID access, manages employees, and holds final job-close authority.</p></div>
+        <div class="tilt-card" data-tilt><span class="num">REPORTS</span><h3>MIS &amp; analytics</h3><p>Month/year comparisons, pie charts, and exportable tracking reports across the business.</p></div>
+      </div>
+    </div>
+    <div class="role-panel" id="panel-employee">
+      <div class="card-grid">
+        <div class="tilt-card" data-tilt><span class="num">SEES</span><h3>Assigned jobs only</h3><p>Only the jobs directly assigned to them — nothing from other branches or teams.</p></div>
+        <div class="tilt-card" data-tilt><span class="num">CREATES</span><h3>Job numbers</h3><p>Opens new jobs, updates milestone status, and uploads supporting documents at each step.</p></div>
+        <div class="tilt-card" data-tilt><span class="num">CLOSES</span><h3>Completed jobs</h3><p>Marks a job "Closed" after POD is uploaded and verified, moving it to History.</p></div>
+      </div>
+    </div>
+    <div class="role-panel" id="panel-client">
+      <div class="card-grid">
+        <div class="tilt-card" data-tilt><span class="num">SEES</span><h3>Their own shipments</h3><p>Full open and closed shipment history — searchable by Job, Container or Invoice number.</p></div>
+        <div class="tilt-card" data-tilt><span class="num">CREATES</span><h3>Customer logins</h3><p>Provisions and resets login access for their own downstream customers.</p></div>
+        <div class="tilt-card" data-tilt><span class="num">DOWNLOADS</span><h3>Every document</h3><p>Invoices, packing lists, BL/AWB, BOE and POD — all attached directly to the job.</p></div>
+      </div>
+    </div>
+    <div class="role-panel" id="panel-customer">
+      <div class="card-grid">
+        <div class="tilt-card" data-tilt><span class="num">SEES</span><h3>Their own shipments only</h3><p>Live, read-only visibility into shipments booked on their behalf — nothing else.</p></div>
+        <div class="tilt-card" data-tilt><span class="num">TRACKS</span><h3>Full milestone timeline</h3><p>Dates, remarks and current status for every step, from booking to delivery.</p></div>
+        <div class="tilt-card" data-tilt><span class="num">RESET</span><h3>Via their Client</h3><p>Password resets are requested through the Client who provisioned their login, not Nedlloyd directly.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section class="section-dark stack-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">The Ten Milestones</span>
+      <h2 style="color:#fff;">Every job, tracked the same way.</h2>
+      <p>From booking confirmation to job closure — with the right document attached at every key step.</p>
+    </div>
+    <div class="timeline-track">
+      <div class="timeline-steps">
+        <div class="t-step"><div class="t-dot">1</div><div class="t-label">Booking Confirmed<span class="t-doc">Booking Note</span></div></div>
+        <div class="t-step"><div class="t-dot">2</div><div class="t-label">Cargo Picked Up<span class="t-doc">Invoice + PL</span></div></div>
+        <div class="t-step"><div class="t-dot">3</div><div class="t-label">Customs (Origin)<span class="t-doc">Shipping Bill</span></div></div>
+        <div class="t-step"><div class="t-dot">4</div><div class="t-label">Departed<span class="t-doc">BL / AWB</span></div></div>
+        <div class="t-step"><div class="t-dot">5</div><div class="t-label">In Transit</div></div>
+        <div class="t-step"><div class="t-dot">6</div><div class="t-label">Arrived Destination</div></div>
+        <div class="t-step"><div class="t-dot">7</div><div class="t-label">Customs (Dest.)<span class="t-doc">BOE / DO</span></div></div>
+        <div class="t-step"><div class="t-dot">8</div><div class="t-label">Out for Delivery</div></div>
+        <div class="t-step"><div class="t-dot">9</div><div class="t-label">Delivered (POD)<span class="t-doc">POD Copy</span></div></div>
+        <div class="t-step"><div class="t-dot">10</div><div class="t-label">Job Closed</div></div>
+      </div>
+    </div>
+    <p style="margin-top:28px;max-width:640px;">Job Closed moves a shipment into History — still fully viewable by the Client and their Customer, with the complete audit trail retained.</p>
+  </div>
+</section>
+
+<!-- ============ USER GUIDE ============ -->
+<section id="guide" class="section-ice cover-natural">
+  <div class="container two-col">
+    <div>
+      <span class="eyebrow">User Guide</span>
+      <h2>Using the dashboard, step by step.</h2>
+      <p>Everything a Client or Client's Customer needs to log in, track a shipment, and manage access.</p>
+      <button class="btn btn-primary" style="margin-top:20px;" onclick="openModal('loginModal')">Access Dashboard →</button>
+    </div>
+    <div class="guide-box" style="margin-top:0;">
+      <div class="guide-item open">
+        <div class="guide-q" onclick="this.parentElement.classList.toggle('open')"><span><span class="gnum">01</span>Open Website &amp; Log In</span><span class="chev">+</span></div>
+        <div class="guide-a"><p>Go to nedlloydgroup.com and click the Client Login button. Enter the User ID and password provided by Nedlloyd, or by your service provider.</p></div>
+      </div>
+      <div class="guide-item">
+        <div class="guide-q" onclick="this.parentElement.classList.toggle('open')"><span><span class="gnum">02</span>View Your Dashboard</span><span class="chev">+</span></div>
+        <div class="guide-a"><p>After login, your dashboard shows every shipment: Job No, Origin, Destination, Mode, ETA and current live status.</p></div>
+      </div>
+      <div class="guide-item">
+        <div class="guide-q" onclick="this.parentElement.classList.toggle('open')"><span><span class="gnum">03</span>Track a Shipment</span><span class="chev">+</span></div>
+        <div class="guide-a"><p>Click a Job Number, or search by Job No / Container No / Invoice No, to open the full milestone timeline with dates and remarks.</p></div>
+      </div>
+      <div class="guide-item">
+        <div class="guide-q" onclick="this.parentElement.classList.toggle('open')"><span><span class="gnum">04</span>Download Documents</span><span class="chev">+</span></div>
+        <div class="guide-a"><p>Inside a job page, open the Documents tab to view or download every uploaded file — Invoice, Packing List, BL/AWB, BOE, POD.</p></div>
+      </div>
+      <div class="guide-item">
+        <div class="guide-q" onclick="this.parentElement.classList.toggle('open')"><span><span class="gnum">05</span>Manage Your Customers (Clients only)</span><span class="chev">+</span></div>
+        <div class="guide-a"><p>Clients get a User Management menu to create and reset login IDs for their own customers, who then see only their own shipments.</p></div>
+      </div>
+      <div class="guide-item">
+        <div class="guide-q" onclick="this.parentElement.classList.toggle('open')"><span><span class="gnum">06</span>Password Reset &amp; Help</span><span class="chev">+</span></div>
+        <div class="guide-a"><p>Client's Customers contact their Client for a reset; Clients contact Nedlloyd Admin. Closed jobs remain viewable in your History.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="stack-section">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Ready to see it in action?</h2>
+        <p>Sign in with your Client, Employee or Admin credentials to open your dashboard.</p>
+      </div>
+      <div class="cta-actions">
+        <button class="btn" style="background:var(--dark);color:#fff;" onclick="openModal('loginModal')">Access Dashboard</button>
+        <a href="contact.html" class="btn btn-ghost">Request Access</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Nedlloyd Logistics" class="logo-img">
+      </div>
+      <p>Integrated freight, customs, warehousing and distribution — pan-India, connected globally.</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/Nedlloydgroup" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="https://x.com/Nedlloydgroup" aria-label="X (Twitter)" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.9 2H22l-7.2 8.26L23.2 22H16.9l-5-6.5L6 22H2.9l7.7-8.84L1 2h6.5l4.5 5.9L18.9 2zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20z"/></svg></a>
+        <a href="https://www.linkedin.com/company/nedlloydgroup/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.53-1 1.83-2.1 3.77-2.1C20.9 8.6 22 11 22 14.4V21h-4v-6.1c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="about.html">About Us</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="compliances.html">Compliances</a>
+      <a href="careers.html">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h5>Solutions</h5>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="tracking.html">Customer Dashboard</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+  </div>
+  <div class="footer-wordmark-band">
+    <div class="container footer-bottom">
+      <span>© 2026 Nedlloyd Logistics India Pvt. Ltd. All rights reserved.</span>
+      <div class="legal-links">
+        <span>www.nedlloydgroup.com</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-wordmark" aria-hidden="true"><span>NEDLLOYD</span></div>
+  </div>
+</footer>
+
+<!-- ============ LOGIN MODAL ============ -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+    <h3>Customer Dashboard</h3>
+    <p class="sub">Sign in to view live shipment status, milestones and documents.</p>
+    <div class="role-select">
+      <span class="role-chip active">Client</span>
+      <span class="role-chip">Client's Customer</span>
+      <span class="role-chip">Employee</span>
+      <span class="role-chip">Admin</span>
+    </div>
+    <div class="login-mock">
+      <label>User ID</label>
+      <input type="text" placeholder="e.g. NDL-CL-0231">
+      <label>Password</label>
+      <input type="password" placeholder="••••••••">
+      <button class="btn btn-primary" style="width:100%;" onclick="event.preventDefault(); this.closest('.modal-box').querySelector('.sub').innerText='Dashboard access is being finalized — contact your Nedlloyd representative for early access.';">Sign In</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

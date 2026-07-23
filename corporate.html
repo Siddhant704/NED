@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corporate — Nedlloyd Logistics</title>
+<meta name="description" content="Nedlloyd Logistics corporate overview — the clients we serve, our culture, and how the organization is structured to deliver integrated logistics at scale.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav class="container">
+    <a href="index.html" class="logo" aria-label="Nedlloyd Logistics home">
+      <img src="assets/logo.png" alt="Nedlloyd Logistics" class="logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="tracking.html">Tracking</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn btn-ghost btn-sm" onclick="openModal('loginModal')">Client Login</button>
+      <a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a>
+      <button class="hamburger" aria-label="Menu" onclick="toggleMobile()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div id="mobileMenu" style="display:none;background:var(--dark-2);border-top:1px solid var(--line);">
+    <div class="container" style="padding:20px 28px;display:flex;flex-direction:column;gap:16px;">
+      <a href="about.html" style="color:#fff;">About</a>
+      <a href="services.html" style="color:#fff;">Services</a>
+      <a href="industries.html" style="color:#fff;">Industries</a>
+      <a href="tracking.html" style="color:#fff;">Tracking</a>
+      <a href="corporate.html" style="color:#fff;">Corporate</a>
+      <a href="compliances.html" style="color:#fff;">Compliances</a>
+      <a href="careers.html" style="color:#fff;">Careers</a>
+      <a href="contact.html" style="color:#fff;">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero stack-section">
+  <div class="container page-hero-grid">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Corporate</span></div>
+      <span class="eyebrow light">Corporate</span>
+      <h1>An organization built to move heavy industry.</h1>
+      <p class="lead">Nedlloyd Logistics is conceived to provide professional, integrated logistics management services — optimizing our clients' supply chain requirements across every industry we serve.</p>
+    </div>
+    <div class="page-hero-visual">
+      <canvas id="page-hero-canvas" data-scene="flow" aria-hidden="true"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOTABLE CLIENTS ============ -->
+<section class="stack-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Trusted By</span>
+      <h2>Organizations that run on Nedlloyd.</h2>
+      <p>A sample of the corporate clients we've partnered with across sectors.</p>
+    </div>
+    <div class="logo-strip">
+      <span class="logo-chip">Sony</span>
+      <span class="logo-chip">BSNL</span>
+      <span class="logo-chip">Alstom</span>
+      <span class="logo-chip">HP</span>
+      <span class="logo-chip">Haier</span>
+      <span class="logo-chip">Jindal</span>
+    </div>
+    <div class="stat-row">
+      <div class="stat"><b data-target="3554" data-suffix="+">0</b><span>Projects Completed</span></div>
+      <div class="stat"><b data-target="73" data-suffix="+">0</b><span>Qualified Employees</span></div>
+      <div class="stat"><b data-target="123">0</b><span>National Partners</span></div>
+      <div class="stat"><b data-target="27">0</b><span>International Partners</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIFE AT NEDLLOYD ============ -->
+<section class="section-ice stack-section">
+  <div class="container two-col">
+    <div class="content-block">
+      <span class="eyebrow">Life @ Nedlloyd</span>
+      <h2>An inclusive, open culture.</h2>
+      <p>We're building an organization where people work together in smart, collaborative teams — recognized as a brand with reach across 90 countries, backed by a culture that values its people as its greatest asset.</p>
+      <p>Career development is treated as a two-way commitment: employees are encouraged to take the reins on their own path, with structured opportunities to grow across functions, branches and modes of transport.</p>
+      <a href="careers.html" class="btn btn-outline btn-sm">See open roles →</a>
+    </div>
+    <div class="value-grid" style="grid-template-columns:1fr;">
+      <div class="value-card"><span class="num">01</span><h3>Collaborative teams</h3><p>Smart, inspiring teams working across branches and modes.</p></div>
+      <div class="value-card"><span class="num">02</span><h3>No geographical boundaries</h3><p>Careers and client relationships that extend well beyond one region.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GOVERNANCE ============ -->
+<section class="stack-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">How We Operate</span>
+      <h2>Accountability, built into the system.</h2>
+      <p>Every job — regardless of client, mode or branch — runs on the same Job Number, the same ten milestones, and the same role-based visibility rules.</p>
+    </div>
+    <div class="card-grid">
+      <div class="tilt-card" data-tilt><span class="num">→</span><h3>Compliances</h3><p>ISO, OHSAS and WCA certifications underpin our quality, safety and environmental commitments.</p><a href="compliances.html" class="btn btn-outline btn-sm" style="margin-top:8px;">View page</a></div>
+      <div class="tilt-card" data-tilt><span class="num">→</span><h3>Customer Dashboard</h3><p>Role-based reporting gives Admin full visibility while keeping client data properly partitioned.</p><a href="tracking.html" class="btn btn-outline btn-sm" style="margin-top:8px;">View page</a></div>
+      <div class="tilt-card" data-tilt><span class="num">→</span><h3>About Us</h3><p>Our vision, mission and the core values that guide every decision.</p><a href="about.html" class="btn btn-outline btn-sm" style="margin-top:8px;">View page</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="stack-section">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Want to partner with Nedlloyd?</h2>
+        <p>Tell us about your project and our team will respond within one business day.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn" style="background:var(--dark);color:#fff;">Get in Touch</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Nedlloyd Logistics" class="logo-img">
+      </div>
+      <p>Integrated freight, customs, warehousing and distribution — pan-India, connected globally.</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/Nedlloydgroup" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="https://x.com/Nedlloydgroup" aria-label="X (Twitter)" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.9 2H22l-7.2 8.26L23.2 22H16.9l-5-6.5L6 22H2.9l7.7-8.84L1 2h6.5l4.5 5.9L18.9 2zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20z"/></svg></a>
+        <a href="https://www.linkedin.com/company/nedlloydgroup/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.53-1 1.83-2.1 3.77-2.1C20.9 8.6 22 11 22 14.4V21h-4v-6.1c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="about.html">About Us</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="compliances.html">Compliances</a>
+      <a href="careers.html">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h5>Solutions</h5>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="tracking.html">Customer Dashboard</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+  </div>
+  <div class="footer-wordmark-band">
+    <div class="container footer-bottom">
+      <span>© 2026 Nedlloyd Logistics India Pvt. Ltd. All rights reserved.</span>
+      <div class="legal-links">
+        <span>www.nedlloydgroup.com</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-wordmark" aria-hidden="true"><span>NEDLLOYD</span></div>
+  </div>
+</footer>
+
+<!-- ============ LOGIN MODAL ============ -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+    <h3>Customer Dashboard</h3>
+    <p class="sub">Sign in to view live shipment status, milestones and documents.</p>
+    <div class="role-select">
+      <span class="role-chip active">Client</span>
+      <span class="role-chip">Client's Customer</span>
+      <span class="role-chip">Employee</span>
+      <span class="role-chip">Admin</span>
+    </div>
+    <div class="login-mock">
+      <label>User ID</label>
+      <input type="text" placeholder="e.g. NDL-CL-0231">
+      <label>Password</label>
+      <input type="password" placeholder="••••••••">
+      <button class="btn btn-primary" style="width:100%;" onclick="event.preventDefault(); this.closest('.modal-box').querySelector('.sub').innerText='Dashboard access is being finalized — see the User Guide on the Tracking page, or contact your Nedlloyd representative.';">Sign In</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

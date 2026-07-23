@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nedlloyd Logistics — Integrated Logistics, Freight, Customs &amp; Warehousing</title>
+<meta name="description" content="Nedlloyd Logistics delivers integrated freight, customs, warehousing and distribution solutions across Oil &amp; Gas, Power, Renewables, Steel, Automotive and Rail — Pan-India, connected globally.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav class="container">
+    <a href="index.html" class="logo" aria-label="Nedlloyd Logistics home">
+      <img src="assets/logo.png" alt="Nedlloyd Logistics" class="logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="tracking.html">Tracking</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn btn-ghost btn-sm" onclick="openModal('loginModal')">Client Login</button>
+      <a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a>
+      <button class="hamburger" aria-label="Menu" onclick="toggleMobile()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div id="mobileMenu" style="display:none;background:var(--dark-2);border-top:1px solid var(--line);">
+    <div class="container" style="padding:20px 28px;display:flex;flex-direction:column;gap:16px;">
+      <a href="about.html" style="color:#fff;">About</a>
+      <a href="services.html" style="color:#fff;">Services</a>
+      <a href="industries.html" style="color:#fff;">Industries</a>
+      <a href="tracking.html" style="color:#fff;">Tracking</a>
+      <a href="corporate.html" style="color:#fff;">Corporate</a>
+      <a href="compliances.html" style="color:#fff;">Compliances</a>
+      <a href="careers.html" style="color:#fff;">Careers</a>
+      <a href="contact.html" style="color:#fff;">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero stack-section" id="home">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow light">Pan-India Network · Global Reach</span>
+      <h1>Integrated logistics,<br>built for <em>heavy industry.</em></h1>
+      <p class="lead">Freight, customs, warehousing and distribution — coordinated end-to-end for Energy, Power, Steel, Automotive and Rail, with live shipment visibility from booking to delivery.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+        <a href="tracking.html" class="btn btn-ghost">Track a Shipment →</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b data-target="3554" data-suffix="+">0</b><span>Projects Completed</span></div>
+        <div class="stat"><b data-target="73" data-suffix="+">0</b><span>Qualified Employees</span></div>
+        <div class="stat"><b data-target="123">0</b><span>National Partners</span></div>
+        <div class="stat"><b data-target="27">0</b><span>International Partners</span></div>
+      </div>
+    </div>
+    <div class="hero-3d-wrap"></div>
+  </div>
+  <div class="scroll-cue">Scroll <div class="line"></div></div>
+</section>
+
+<!-- ============ ABOUT TEASER ============ -->
+<section id="about" class="stack-section">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <span class="eyebrow">Who We Are</span>
+      <h2>One partner, every mode — air, sea and land.</h2>
+      <p>Nedlloyd Logistics is an emerging integrated logistics organization and a preferred partner to some of the world's largest companies in Energy, Steel, Power, Oil &amp; Gas, Infrastructure, Automotive and Rail.</p>
+      <p>Every shipment runs on one operating system: a single Job Number, ten tracked milestones, and real-time visibility for everyone who needs it — your team, and your customers.</p>
+      <a href="about.html" class="btn btn-outline btn-sm" style="margin-top:8px;">More about Nedlloyd →</a>
+    </div>
+    <div class="cube-scene">
+      <div class="cube">
+        <div class="face front">AIR</div>
+        <div class="face back">SEA</div>
+        <div class="face right">LAND</div>
+        <div class="face left">CUSTOMS</div>
+        <div class="face top">WAREHOUSE</div>
+        <div class="face bottom">4PL</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES TEASER ============ -->
+<section id="services" class="section-ice stack-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">What We Do</span>
+      <h2>Every link in the chain, under one roof.</h2>
+      <p>From origin customs to last-mile delivery, our services are built to plug directly into your supply chain.</p>
+    </div>
+    <div class="card-grid">
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="num">SVC · 01</span>
+            <div class="icon-wrap" style="color:#FF8A47;font-size:20px;">✈</div>
+            <h3>Freight Transportation</h3>
+            <p>Air, sea and land movement for cargo of any size or urgency.</p>
+            <span class="flip-hint">Hover for more →</span>
+          </div>
+          <div class="flip-back">
+            <h3>Freight Transportation</h3>
+            <p>We plan the mode mix — air, sea, road or rail — around your deadline and cargo profile.</p>
+            <div class="tags"><span>Air</span><span>Sea</span><span>Road/Rail</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="num">SVC · 02</span>
+            <div class="icon-wrap" style="color:#FF8A47;font-size:20px;">§</div>
+            <h3>Customs Clearance &amp; Brokerage</h3>
+            <p>Licensed brokerage and clearance handling at origin and destination.</p>
+            <span class="flip-hint">Hover for more →</span>
+          </div>
+          <div class="flip-back">
+            <h3>Customs Clearance &amp; Brokerage</h3>
+            <p>Licensed brokers handle shipping bills and BOE/DO filings, keeping cargo compliant and moving.</p>
+            <div class="tags"><span>Brokerage</span><span>Shipping Bill</span><span>BOE/DO</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="flip-card" tabindex="0">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <span class="num">SVC · 03</span>
+            <div class="icon-wrap" style="color:#FF8A47;font-size:20px;">▣</div>
+            <h3>Warehousing &amp; Distribution</h3>
+            <p>Storage, inventory management and distribution across our facility network.</p>
+            <span class="flip-hint">Hover for more →</span>
+          </div>
+          <div class="flip-back">
+            <h3>Warehousing &amp; Distribution</h3>
+            <p>Our facility network handles staging and inventory, with distribution planned around your delivery windows.</p>
+            <div class="tags"><span>Storage</span><span>Inventory</span><span>Distribution</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:22px;">
+      <a href="services.html" class="btn btn-outline">View all 9 services →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INDUSTRIES TEASER ============ -->
+<section id="industries" class="stack-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Who We Move For</span>
+      <h2>Built for the sectors that don't tolerate delay.</h2>
+      <p>Heavy, time-sensitive, and regulation-bound cargo — moved by people who understand the industry, not just the shipment.</p>
+    </div>
+    <div class="industry-grid">
+      <div class="industry-cell"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg><h4>Oil &amp; Gas</h4></div>
+      <div class="industry-cell"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg><h4>Power</h4></div>
+      <div class="industry-cell"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg><h4>BESS / Battery Storage</h4></div>
+      <div class="industry-cell"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg><h4>Solar Energy</h4></div>
+      <div class="industry-cell"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="1.5"/><path d="M7 7V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v2"/></svg><h4>Wind Energy</h4></div>
+    </div>
+    <div style="text-align:center;margin-top:22px;">
+      <a href="industries.html" class="btn btn-outline">Explore all 10 industries →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRACKING TEASER ============ -->
+<section id="tracking" class="stack-section">
+  <div class="container track-wrap">
+    <div>
+      <span class="eyebrow">Live Visibility</span>
+      <h2>Track every shipment,<br>from booking to POD.</h2>
+      <p>Every job runs through ten tracked milestones. Role-based dashboards mean your team, your company, and your own customers all see exactly what they need — nothing more.</p>
+      <button class="btn btn-primary" style="margin-top:28px;" onclick="openModal('loginModal')">Access Dashboard →</button>
+      <a href="tracking.html" class="btn btn-outline" style="margin-top:28px;margin-left:12px;">Full tracking guide →</a>
+    </div>
+
+    <div>
+      <h3 style="margin-bottom:18px;">Shipment milestone timeline</h3>
+      <div class="timeline-track">
+        <div class="timeline-steps">
+          <div class="t-step"><div class="t-dot">1</div><div class="t-label">Booking Confirmed<span class="t-doc">Booking Note</span></div></div>
+          <div class="t-step"><div class="t-dot">2</div><div class="t-label">Cargo Picked Up<span class="t-doc">Invoice + PL</span></div></div>
+          <div class="t-step"><div class="t-dot">3</div><div class="t-label">Customs (Origin)<span class="t-doc">Shipping Bill</span></div></div>
+          <div class="t-step"><div class="t-dot">4</div><div class="t-label">Departed<span class="t-doc">BL / AWB</span></div></div>
+          <div class="t-step"><div class="t-dot">5</div><div class="t-label">In Transit</div></div>
+          <div class="t-step"><div class="t-dot">6</div><div class="t-label">Arrived Destination</div></div>
+          <div class="t-step"><div class="t-dot">7</div><div class="t-label">Customs (Dest.)<span class="t-doc">BOE / DO</span></div></div>
+          <div class="t-step"><div class="t-dot">8</div><div class="t-label">Out for Delivery</div></div>
+          <div class="t-step"><div class="t-dot">9</div><div class="t-label">Delivered (POD)<span class="t-doc">POD Copy</span></div></div>
+          <div class="t-step"><div class="t-dot">10</div><div class="t-label">Job Closed</div></div>
+        </div>
+      </div>
+      <div class="role-list role-list-row">
+        <div class="role-pill"><span class="tag">ADMIN</span><p><strong>Nedlloyd Admin</strong>Full visibility across all clients and jobs, reporting &amp; MIS.</p></div>
+        <div class="role-pill"><span class="tag">CLIENT</span><p><strong>Client</strong>Full view of their own shipments, and can manage their own customers' access.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPLIANCE STRIP ============ -->
+<section class="compliance-band stack-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Built On Trust</span>
+      <h2>Certified quality, safety and environmental standards.</h2>
+      <p>Every shipment runs under internationally recognized management system certifications — not just promises.</p>
+    </div>
+    <div class="cert-grid">
+      <div class="cert-card"><div class="badge">ISO</div><h4>ISO 9001:2015</h4><p>Quality Management</p></div>
+      <div class="cert-card"><div class="badge">ISO</div><h4>ISO 14001</h4><p>Environmental Management</p></div>
+      <div class="cert-card"><div class="badge">OHSAS</div><h4>OHSAS 18001</h4><p>Health &amp; Safety</p></div>
+      <div class="cert-card"><div class="badge">WCA</div><h4>WCA Network</h4><p>Global Partner Alliance</p></div>
+    </div>
+    <div style="text-align:center;margin-top:22px;">
+      <a href="compliances.html" class="btn btn-outline">View all compliances →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section-ice testimonials-band stack-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Client Feedback</span>
+      <h2>What running on Nedlloyd feels like.</h2>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <p class="quote">"Milestone updates land the moment they happen — our planning team stopped chasing status calls."</p>
+        <div class="who"><div class="avatar">SC</div><div><b>Supply Chain Lead</b><span>EPC &amp; Infrastructure</span></div></div>
+      </div>
+      <div class="test-card">
+        <p class="quote">"Being able to give our own customers read-only tracking access, without extra work on our side, was the difference-maker."</p>
+        <div class="who"><div class="avatar">OP</div><div><b>Operations Manager</b><span>Steel &amp; Cement</span></div></div>
+      </div>
+      <div class="test-card">
+        <p class="quote">"Customs handling on the export side has been consistent, shipment after shipment."</p>
+        <div class="who"><div class="avatar">TL</div><div><b>Trade Compliance Lead</b><span>Automotive</span></div></div>
+      </div>
+    </div>
+    <p class="sample-note">Sample content — pending finalized client testimonials for publication.</p>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="cta-wrap stack-section">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Ready to move your next shipment?</h2>
+        <p>Tell us what's moving and our team will respond within one business day with next steps.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn" style="background:var(--dark);color:#fff;">Get a Quote</a>
+        <a href="tracking.html" class="btn btn-ghost">Track a Shipment</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Nedlloyd Logistics" class="logo-img">
+      </div>
+      <p>Integrated freight, customs, warehousing and distribution — pan-India, connected globally.</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/Nedlloydgroup" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="https://x.com/Nedlloydgroup" aria-label="X (Twitter)" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.9 2H22l-7.2 8.26L23.2 22H16.9l-5-6.5L6 22H2.9l7.7-8.84L1 2h6.5l4.5 5.9L18.9 2zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20z"/></svg></a>
+        <a href="https://www.linkedin.com/company/nedlloydgroup/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.53-1 1.83-2.1 3.77-2.1C20.9 8.6 22 11 22 14.4V21h-4v-6.1c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="about.html">About Us</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="compliances.html">Compliances</a>
+      <a href="careers.html">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h5>Solutions</h5>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="tracking.html">Customer Dashboard</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+  </div>
+  <div class="footer-wordmark-band">
+    <div class="container footer-bottom">
+      <span>© 2026 Nedlloyd Logistics India Pvt. Ltd. All rights reserved.</span>
+      <div class="legal-links">
+        <span>www.nedlloydgroup.com</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-wordmark" aria-hidden="true"><span>NEDLLOYD</span></div>
+  </div>
+</footer>
+
+<!-- ============ LOGIN MODAL ============ -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+    <h3>Customer Dashboard</h3>
+    <p class="sub">Sign in to view live shipment status, milestones and documents.</p>
+    <div class="role-select">
+      <span class="role-chip active">Client</span>
+      <span class="role-chip">Client's Customer</span>
+      <span class="role-chip">Employee</span>
+      <span class="role-chip">Admin</span>
+    </div>
+    <div class="login-mock">
+      <label>User ID</label>
+      <input type="text" placeholder="e.g. NDL-CL-0231">
+      <label>Password</label>
+      <input type="password" placeholder="••••••••">
+      <button class="btn btn-primary" style="width:100%;" onclick="event.preventDefault(); this.closest('.modal-box').querySelector('.sub').innerText='Dashboard access is being finalized — see the User Guide on the Tracking page, or contact your Nedlloyd representative.';">Sign In</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

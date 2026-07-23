@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Compliances — Nedlloyd Logistics</title>
+<meta name="description" content="Nedlloyd Logistics certifications: ISO 9001:2015 Quality Management, ISO 14001 Environmental Management, OHSAS 18001 Occupational Health & Safety, and WCA network membership.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+
+<!-- ============ HEADER ============ -->
+<header>
+  <nav class="container">
+    <a href="index.html" class="logo" aria-label="Nedlloyd Logistics home">
+      <img src="assets/logo.png" alt="Nedlloyd Logistics" class="logo-img">
+    </a>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="tracking.html">Tracking</a>
+      <a href="careers.html">Careers</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <button class="btn btn-ghost btn-sm" onclick="openModal('loginModal')">Client Login</button>
+      <a href="contact.html" class="btn btn-primary btn-sm">Get a Quote</a>
+      <button class="hamburger" aria-label="Menu" onclick="toggleMobile()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div id="mobileMenu" style="display:none;background:var(--dark-2);border-top:1px solid var(--line);">
+    <div class="container" style="padding:20px 28px;display:flex;flex-direction:column;gap:16px;">
+      <a href="about.html" style="color:#fff;">About</a>
+      <a href="services.html" style="color:#fff;">Services</a>
+      <a href="industries.html" style="color:#fff;">Industries</a>
+      <a href="tracking.html" style="color:#fff;">Tracking</a>
+      <a href="corporate.html" style="color:#fff;">Corporate</a>
+      <a href="compliances.html" style="color:#fff;">Compliances</a>
+      <a href="careers.html" style="color:#fff;">Careers</a>
+      <a href="contact.html" style="color:#fff;">Contact</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero stack-section">
+  <div class="container page-hero-grid">
+    <div class="page-hero-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Compliances</span></div>
+      <span class="eyebrow light">Certifications</span>
+      <h1>Quality, safety and environmental standards — certified.</h1>
+      <p class="lead">Nedlloyd Logistics operates under internationally recognized management system certifications, backing every shipment with documented process discipline.</p>
+    </div>
+    <div class="page-hero-visual">
+      <canvas id="page-hero-canvas" data-scene="rings-simple" aria-hidden="true"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section class="stack-section">
+  <div class="container">
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="badge">ISO</div>
+        <h4>ISO 9001:2015</h4>
+        <p>Quality Management System — consistent process discipline across every branch and job.</p>
+      </div>
+      <div class="cert-card">
+        <div class="badge">ISO</div>
+        <h4>ISO 14001</h4>
+        <p>Environmental Management System — responsible handling and reduced operational impact.</p>
+      </div>
+      <div class="cert-card">
+        <div class="badge">OHSAS</div>
+        <h4>OHSAS 18001</h4>
+        <p>Occupational Health &amp; Safety Management — protecting our people on every site and warehouse floor.</p>
+      </div>
+      <div class="cert-card">
+        <div class="badge">WCA</div>
+        <h4>WCA Network</h4>
+        <p>Membership in the World Cargo Alliance network, extending our vetted international partner coverage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPLIANCE STRIP ============ -->
+<section class="section-ice stack-section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Operating Standards</span>
+      <h2>Compliance built into daily operations.</h2>
+    </div>
+    <div class="compliance-strip" style="border:none;padding:0;">
+      <div class="compliance-item"><span class="dot"></span>Customs-Licensed Clearance Operations</div>
+      <div class="compliance-item"><span class="dot"></span>GST &amp; Cross-Border Trade Compliant</div>
+      <div class="compliance-item"><span class="dot"></span>Role-Based Data Access Controls</div>
+      <div class="compliance-item"><span class="dot"></span>Full Shipment Audit Trail</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DATA & LEGAL ============ -->
+<section class="stack-section">
+  <div class="container two-col">
+    <div class="content-block">
+      <span class="eyebrow">Data &amp; Access Governance</span>
+      <h2>How shipment data is protected.</h2>
+      <p>Every Customer Dashboard action is filtered by role — an Employee only sees assigned jobs, a Client only sees their own shipments, and a Client's Customer sees only what was booked on their behalf. Sessions are verified on every action, and passwords are never stored or logged in plaintext.</p>
+      <p>Client-provisioned Customer accounts remain visible to Nedlloyd Admin through an audit log, so access to sensitive documents like invoices and customs paperwork is never granted without oversight.</p>
+    </div>
+    <div class="value-grid" style="grid-template-columns:1fr;">
+      <div class="value-card"><span class="num">→</span><h3>Privacy Policy</h3><p>How we collect, use and protect your data.</p><a href="privacy.html" class="btn btn-outline btn-sm" style="margin-top:8px;">Read policy</a></div>
+      <div class="value-card"><span class="num">→</span><h3>Terms of Use</h3><p>Terms governing use of our website and Customer Dashboard.</p><a href="terms.html" class="btn btn-outline btn-sm" style="margin-top:8px;">Read terms</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="stack-section">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Have a compliance question?</h2>
+        <p>Speak with our team about certifications, documentation, or a specific regulatory requirement.</p>
+      </div>
+      <div class="cta-actions">
+        <a href="contact.html" class="btn" style="background:var(--dark);color:#fff;">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Nedlloyd Logistics" class="logo-img">
+      </div>
+      <p>Integrated freight, customs, warehousing and distribution — pan-India, connected globally.</p>
+      <div class="social-row">
+        <a href="https://www.facebook.com/Nedlloydgroup" aria-label="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="https://x.com/Nedlloydgroup" aria-label="X (Twitter)" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.9 2H22l-7.2 8.26L23.2 22H16.9l-5-6.5L6 22H2.9l7.7-8.84L1 2h6.5l4.5 5.9L18.9 2zm-1.1 18h1.7L7.3 3.9H5.5L17.8 20z"/></svg></a>
+        <a href="https://www.linkedin.com/company/nedlloydgroup/" aria-label="LinkedIn" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.53-1 1.83-2.1 3.77-2.1C20.9 8.6 22 11 22 14.4V21h-4v-6.1c0-1.5-.03-3.4-2.1-3.4-2.1 0-2.4 1.6-2.4 3.3V21H9z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Company</h5>
+      <a href="about.html">About Us</a>
+      <a href="corporate.html">Corporate</a>
+      <a href="compliances.html">Compliances</a>
+      <a href="careers.html">Careers</a>
+    </div>
+    <div class="footer-col">
+      <h5>Solutions</h5>
+      <a href="services.html">Services</a>
+      <a href="industries.html">Industries</a>
+      <a href="tracking.html">Customer Dashboard</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h5>Legal</h5>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </div>
+  </div>
+  <div class="footer-wordmark-band">
+    <div class="container footer-bottom">
+      <span>© 2026 Nedlloyd Logistics India Pvt. Ltd. All rights reserved.</span>
+      <div class="legal-links">
+        <span>www.nedlloydgroup.com</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </div>
+    <div class="footer-wordmark" aria-hidden="true"><span>NEDLLOYD</span></div>
+  </div>
+</footer>
+
+<!-- ============ LOGIN MODAL ============ -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+    <h3>Customer Dashboard</h3>
+    <p class="sub">Sign in to view live shipment status, milestones and documents.</p>
+    <div class="role-select">
+      <span class="role-chip active">Client</span>
+      <span class="role-chip">Client's Customer</span>
+      <span class="role-chip">Employee</span>
+      <span class="role-chip">Admin</span>
+    </div>
+    <div class="login-mock">
+      <label>User ID</label>
+      <input type="text" placeholder="e.g. NDL-CL-0231">
+      <label>Password</label>
+      <input type="password" placeholder="••••••••">
+      <button class="btn btn-primary" style="width:100%;" onclick="event.preventDefault(); this.closest('.modal-box').querySelector('.sub').innerText='Dashboard access is being finalized — see the User Guide on the Tracking page, or contact your Nedlloyd representative.';">Sign In</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
