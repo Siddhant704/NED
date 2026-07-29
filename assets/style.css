@@ -140,11 +140,14 @@ nav.container{display:flex;align-items:center;justify-content:space-between;heig
 
 /* ---------- PAGE HERO (inner pages) ---------- */
 .page-hero{
-  position:relative;min-height:56vh;background:radial-gradient(ellipse 90% 70% at 78% 10%, #241407 0%, var(--dark) 55%, #08090a 100%);
+  position:relative;min-height:56vh;background:#181E4D;
   overflow:hidden;display:flex;align-items:center;padding-top:104px;padding-bottom:64px;
 }
-.page-hero.page-hero-about{background:#141C48;}
 .page-hero.page-hero-about p.lead{color:var(--white);}
+.page-hero.page-hero-services p.lead,
+.page-hero.page-hero-industries p.lead,
+.page-hero.page-hero-tracking p.lead,
+.page-hero.page-hero-contact p.lead{color:var(--white);}
 .page-hero-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;width:100%;position:relative;z-index:2;}
 .page-hero-visual{position:relative;height:340px;}
 .page-hero-visual::before{
