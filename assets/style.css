@@ -569,7 +569,7 @@ footer{background:#181E4D;color:var(--gray-400);padding:80px 0 0;}
   .stack-section:not(.hero):not(.page-hero):not(.section-ice):not(.section-dark):not(.quote-section){
     background:var(--white);
   }
-  #values.stack-section{padding-bottom:64px;}
+  #values.stack-section{padding-bottom:120px;}
 
   /* generic content tightening so common grids/lists have a fighting
      chance to fit a single screen — applies to any stack-section using
