@@ -85,7 +85,7 @@
       </div>
       <div>
         <label for="qService">Service needed</label>
-        <select id="qService">
+        <select id="qService" onchange="toggleCharterFields()">
           <option>Freight Transportation (Air/Sea/Land)</option>
           <option>Import &amp; Export</option>
           <option>Customs Clearance</option>
@@ -95,7 +95,15 @@
           <option>Reverse Logistics</option>
           <option>4th Party Logistics (4PL)</option>
           <option>Project-Based Solutions</option>
+          <option value="charter">Charter Enquiry (Air / Sea / Road)</option>
         </select>
+      </div>
+      <div id="charterFields" style="display:none;">
+        <div class="form-row">
+          <div><label for="qDims">Cargo dimensions (L × W × H)</label><input id="qDims" type="text" placeholder="e.g. 12m × 3m × 3.5m"></div>
+          <div><label for="qWeight">Cargo weight</label><input id="qWeight" type="text" placeholder="e.g. 18,000 kg"></div>
+        </div>
+        <div><label for="qCharterDate">Required charter date</label><input id="qCharterDate" type="date"></div>
       </div>
       <div>
         <label for="qMsg">Shipment details</label>
@@ -166,6 +174,7 @@
     <div class="footer-col">
       <h5>Solutions</h5>
       <a href="services.html">Services</a>
+      <a href="charter-services.html">Charter Services</a>
       <a href="industries.html">Industries</a>
       <a href="tracking.html">Customer Dashboard</a>
       <a href="contact.html">Contact Us</a>

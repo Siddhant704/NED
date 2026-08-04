@@ -52,7 +52,24 @@ function handleQuote(e){
   const toast = document.getElementById('quoteToast');
   if(toast) toast.classList.add('show');
   e.target.reset();
+  toggleCharterFields();
 }
+
+function toggleCharterFields(){
+  const select = document.getElementById('qService');
+  const fields = document.getElementById('charterFields');
+  if(!select || !fields) return;
+  fields.style.display = select.value === 'charter' ? 'block' : 'none';
+}
+
+document.addEventListener('DOMContentLoaded', ()=>{
+  const select = document.getElementById('qService');
+  if(!select) return;
+  if(new URLSearchParams(window.location.search).get('service') === 'charter'){
+    select.value = 'charter';
+  }
+  toggleCharterFields();
+});
 
 /* ---------------- STAT COUNTERS (data-target driven, reusable anywhere) ---------------- */
 document.addEventListener('DOMContentLoaded', ()=>{
@@ -129,7 +146,7 @@ function initOrbitGlobe(canvasId, opts){
   group.add(globe);
 
   const innerGeo = new THREE.SphereGeometry(2.45*scale, 32, 32);
-  const innerMat = new THREE.MeshBasicMaterial({color:0x17181B, transparent:true, opacity:0.6});
+  const innerMat = new THREE.MeshBasicMaterial({color:0x181E4D, transparent:true, opacity:0.6});
   const inner = new THREE.Mesh(innerGeo, innerMat);
   group.add(inner);
 
