@@ -179,7 +179,7 @@ section{padding:100px 0;position:relative;}
 .cube:hover{animation-play-state:paused;}
 .face{
   position:absolute;width:180px;height:180px;border:1.5px solid rgba(255,106,26,.55);
-  background:linear-gradient(135deg, rgba(255,106,26,.16), rgba(23,24,27,.92));
+  background:linear-gradient(135deg, rgba(255,106,26,.16), rgba(24,30,77,.92));
   display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:600;font-size:12px;
   letter-spacing:.1em;color:var(--orange-400);text-transform:uppercase;backdrop-filter:blur(2px);
 }
