@@ -801,19 +801,26 @@ document.addEventListener('DOMContentLoaded', ()=>{
   initScrollReveal();
   initNavPill();
   initFloatingWidgets();
-  initAmbientBackground();
-  if(document.getElementById('hero-canvas')) initOrbitGlobe('hero-canvas', {full:true, scale:0.82});
 
-  const pageCanvas = document.getElementById('page-hero-canvas');
-  if(pageCanvas){
-    const scene = pageCanvas.getAttribute('data-scene') || 'orbit';
-    if(scene === 'flow') initParticleFlow('page-hero-canvas', {});
-    else if(scene === 'flow-light') initParticleFlow('page-hero-canvas', {light:true});
-    else if(scene === 'crates') initCrateGrid('page-hero-canvas', {});
-    else if(scene === 'constellation') initConstellation('page-hero-canvas', {});
-    else if(scene === 'rings') initRingStack('page-hero-canvas', {});
-    else if(scene === 'rings-simple') initRingStack('page-hero-canvas', {simple:true});
-    else if(scene === 'radar') initRadarPing('page-hero-canvas', {});
-    else initOrbitGlobe('page-hero-canvas', {full:false});
+  // Skip the continuous WebGL scenes on phones/small tablets — they're
+  // purely decorative, and running 2-3 live three.js render loops at once
+  // is a real drag on scroll smoothness and battery on mobile hardware.
+  const isMobile = window.matchMedia('(max-width: 980px)').matches;
+  if(!isMobile){
+    initAmbientBackground();
+    if(document.getElementById('hero-canvas')) initOrbitGlobe('hero-canvas', {full:true, scale:0.82});
+
+    const pageCanvas = document.getElementById('page-hero-canvas');
+    if(pageCanvas){
+      const scene = pageCanvas.getAttribute('data-scene') || 'orbit';
+      if(scene === 'flow') initParticleFlow('page-hero-canvas', {});
+      else if(scene === 'flow-light') initParticleFlow('page-hero-canvas', {light:true});
+      else if(scene === 'crates') initCrateGrid('page-hero-canvas', {});
+      else if(scene === 'constellation') initConstellation('page-hero-canvas', {});
+      else if(scene === 'rings') initRingStack('page-hero-canvas', {});
+      else if(scene === 'rings-simple') initRingStack('page-hero-canvas', {simple:true});
+      else if(scene === 'radar') initRadarPing('page-hero-canvas', {});
+      else initOrbitGlobe('page-hero-canvas', {full:false});
+    }
   }
 });

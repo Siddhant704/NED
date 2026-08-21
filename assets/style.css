@@ -259,9 +259,11 @@ section{padding:100px 0;position:relative;}
 @media (max-width:600px){
   .flip-card{height:auto;perspective:none;}
   .flip-inner{transform-style:flat;transition:none;}
-  .flip-card:hover .flip-inner{transform:none;}
+  .flip-card:hover .flip-inner, .flip-card:focus-within .flip-inner{transform:none;}
   .flip-front, .flip-back{position:relative;inset:auto;backface-visibility:visible;}
-  .flip-back{display:none;}
+  .flip-front{border-radius:var(--radius) var(--radius) 0 0;border-bottom:none;}
+  .flip-back{transform:none;border-radius:0 0 var(--radius) var(--radius);}
+  .flip-front .flip-hint{display:none;}
 }
 
 /* ---------- INDUSTRIES ---------- */
@@ -503,6 +505,9 @@ footer{background:#181E4D;color:var(--gray-400);padding:80px 0 0;}
   .compliance-strip{justify-content:flex-start;}
   .nav-cta .btn-ghost{display:none;}
   .job-card{flex-direction:column;align-items:flex-start;}
+  /* 16px prevents iOS Safari's auto-zoom-on-focus on form fields */
+  form.quote-form input, form.quote-form select, form.quote-form textarea,
+  .login-mock input, .chat-input-row input{font-size:16px;}
 }
 @media (prefers-reduced-motion: reduce){
   .cube{animation:none;}
