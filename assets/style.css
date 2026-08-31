@@ -268,6 +268,11 @@ section{padding:100px 0;position:relative;}
 
 /* ---------- INDUSTRIES ---------- */
 .industry-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);border-radius:var(--radius);overflow:hidden;perspective:900px;}
+/* Home teaser has 6 cells (not the full 11), so it gets its own column
+   count — 3 columns keeps every row full at every breakpoint down to
+   the 2-column mobile layout, instead of inheriting the 5-column grid
+   built for the full Industries page and leaving a blank cell. */
+.industry-grid-home{grid-template-columns:repeat(3,1fr);}
 .industry-cell{
   background:var(--white);padding:36px 20px;text-align:center;transition:background .3s, transform .3s;
   display:flex;flex-direction:column;align-items:center;gap:12px;transform-style:preserve-3d;cursor:default;
@@ -508,6 +513,15 @@ footer{background:#181E4D;color:var(--gray-400);padding:80px 0 0;}
   /* 16px prevents iOS Safari's auto-zoom-on-focus on form fields */
   form.quote-form input, form.quote-form select, form.quote-form textarea,
   .login-mock input, .chat-input-row input{font-size:16px;}
+  /* Milestone timeline: drop the horizontal-scroll strip entirely on
+     phones (its wide inner track was dragging the whole page sideways
+     and leaving whitespace) for a plain vertical list instead. */
+  .timeline-track{overflow-x:visible;padding-bottom:0;}
+  .timeline-steps{flex-direction:column;align-items:stretch;gap:24px;min-width:0;}
+  .timeline-steps::before{top:19px;bottom:19px;left:19px;right:auto;width:2px;height:auto;background:linear-gradient(180deg, var(--orange-500), var(--orange-400), var(--gray-400));}
+  .t-step{flex:none;display:flex;align-items:flex-start;gap:16px;text-align:left;padding:0;}
+  .t-dot{margin:0;flex-shrink:0;}
+  .t-label{text-align:left;padding-top:7px;}
 }
 @media (prefers-reduced-motion: reduce){
   .cube{animation:none;}
