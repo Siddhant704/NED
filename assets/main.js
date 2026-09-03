@@ -629,23 +629,39 @@ function initNavPill(){
     el.classList.add('pill-target');
   }
 
-  const activeLink = links.find(a=>a.classList.contains('active')) || links[0];
+  function hidePill(){
+    pill.classList.remove('ready');
+    links.forEach(a=>a.classList.remove('pill-target'));
+  }
 
-  // position instantly on load (no slide-in from the corner), then
-  // re-enable the transition for subsequent hover moves
-  pill.style.transition = 'none';
-  movePillTo(activeLink);
-  requestAnimationFrame(()=>{
-    requestAnimationFrame(()=>{ pill.style.transition = ''; });
-  });
+  // Only a page whose own nav link carries .active (About, Services, etc.)
+  // gets a highlighted pill on load. Home isn't in this nav bar at all — you
+  // reach it via the logo — so there's no page here to fall back to; doing
+  // so used to light up the first link ("About") on Home and wrongly imply
+  // you'd already navigated there.
+  const activeLink = links.find(a=>a.classList.contains('active'));
+
+  if(activeLink){
+    // position instantly on load (no slide-in from the corner), then
+    // re-enable the transition for subsequent hover moves
+    pill.style.transition = 'none';
+    movePillTo(activeLink);
+    requestAnimationFrame(()=>{
+      requestAnimationFrame(()=>{ pill.style.transition = ''; });
+    });
+  }
 
   links.forEach(a=>{
     a.addEventListener('mouseenter', ()=> movePillTo(a));
   });
-  nav.addEventListener('mouseleave', ()=> movePillTo(activeLink));
+  nav.addEventListener('mouseleave', ()=>{
+    if(activeLink) movePillTo(activeLink);
+    else hidePill();
+  });
 
   window.addEventListener('resize', ()=>{
     const current = nav.querySelector('.pill-target') || activeLink;
+    if(!current) return;
     pill.style.transition = 'none';
     movePillTo(current);
     requestAnimationFrame(()=>{
