@@ -49,8 +49,29 @@ document.addEventListener('DOMContentLoaded', ()=>{
 /* ---------------- QUOTE / ENQUIRY FORM ---------------- */
 function handleQuote(e){
   e.preventDefault();
+  const val = id => { const el = document.getElementById(id); return el ? el.value.trim() : ''; };
+
+  const lines = [
+    `Name: ${val('qName')}`,
+    `Company: ${val('qCompany')}`,
+    `Email: ${val('qEmail')}`,
+    `Phone: ${val('qPhone')}`,
+    `Service: ${val('qService')}`
+  ];
+  const charterFields = document.getElementById('charterFields');
+  if(charterFields && charterFields.style.display !== 'none'){
+    lines.push(`Cargo Dimensions: ${val('qDims')}`);
+    lines.push(`Cargo Weight: ${val('qWeight')}`);
+    lines.push(`Required Charter Date: ${val('qCharterDate')}`);
+  }
+  lines.push('', 'Shipment Details:', val('qMsg'));
+
+  const subject = encodeURIComponent(`New Enquiry from ${val('qName') || 'Website'}`);
+  const body = encodeURIComponent(lines.join('\n'));
+
   const toast = document.getElementById('quoteToast');
   if(toast) toast.classList.add('show');
+  window.location.href = `mailto:Sales@nedlloydgroup.com?subject=${subject}&body=${body}`;
   e.target.reset();
   toggleCharterFields();
 }
